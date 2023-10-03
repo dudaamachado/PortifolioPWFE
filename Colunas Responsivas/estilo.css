@@ -1,0 +1,57 @@
+/* DOCUMENTO CSS */ 
+* {
+    margin:0;
+    padding: 0;
+}
+body {
+    color: #fff;
+    background-color: #000;
+    font-family: revert;
+    font-size: 16px;
+    text-align: center;
+}
+header {
+    height: 90px;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+}
+.linha {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 550px;
+
+}
+.linha h1 {
+    font-family: 'Cormorant Garamond', serif;
+}
+.linha p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 80%;
+}
+.cl-25 {
+    width: 23%;
+    height: 100%;
+    margin:0;
+}
+
+.cl-25 figure img {
+    width: 100%;
+    border: 2px solid white;
+}
+@media screen and (max-width: 1200px) {
+    .cl-25 {
+        width: 48%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .cl-25 {
+        width: 100%;
+        margin: 0;
+    }
+}

@@ -1,0 +1,122 @@
+/*DOCUMENTO CSS*/
+
+/*RESET CSS*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	font-family: Helvetica;
+	background-image: url(fundo.png);
+}
+header {
+	height: 100px;
+	padding-top: 30px;
+	background-color: #00000099;
+}
+header figure {
+	height: 200px;
+    margin-left: 30px;
+}
+header figure img {
+	height: 100%;
+}
+main {
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	background-color: #00000099;
+}
+main section {
+	width: 45%;
+	background-color: #000000bf;
+	border-radius: 8px;
+	margin-bottom: 100px;
+	height: 500px;
+}
+
+.menu{
+	width: 80%;
+	margin: 10% auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main section form {
+	width: 100%;
+
+}
+main section input {
+	height: 50px;
+	width: 100%;
+	border-radius: 5px;
+	border: none;
+	margin: 0.5em 0;
+	background-color: #4c4c4c;
+    color: #ddd;
+    padding: 10px;
+    font-size: 18px;
+}
+label{
+	color: white;
+}
+main section h1 {
+	color: #fff;
+	font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+.botao{
+	background-color: #098de5;
+	color: #fff;
+	font-weight: 700px;
+	font-size: 16px;
+	margin: 20px 0 10px 0;
+	cursor: pointer;
+	width:80%
+}
+.vermelho{
+	background-color: #d21414;
+}
+.lembrar {
+	color: #b3b3b3;
+	font-size: 14px;
+}
+.form_linha{
+	display: flex;
+}
+.form_coluna{
+	width: 48%;
+	margin: 0 5px;
+	display:flex;
+	flex-direction: column;
+}
+.menu .maria{
+	max-width:800px;
+	width: 80%;
+	text-align: center;
+}
+.menu .maria a{
+	width:100%;
+}
+.menu .botao {
+	max-width: 300px;
+	width: 80%;
+}
+@media (max-width:768px) {
+	.form_linha {
+		flex-direction: column;
+	}
+	.menu .maria{
+		min-width: 150px;
+	}
+}
+main section p {
+	color: #fff;
+}

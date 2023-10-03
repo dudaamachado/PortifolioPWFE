@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desconto de Aniversário no Restaurante</title>
+</head>
+<body>
+    <h1>Desconto de Aniversário no Restaurante</h1> 
+
+<div class="box">
+    <label for="dataAniversario">Data de Aniversário (DD/MM):</label> 
+
+    <input type="text" id="dataAniversario"> 
+
+    <label for="valorRefeicao">Valor da Refeição (R$):</label> 
+
+    <input type="number" id="valorRefeicao"> 
+
+    <button onclick="verificarDesconto()">Verificar Desconto</button> 
+
+    <p id="resultado"></p> 
+    <script> 
+
+        // Função para verificar o desconto de aniversário 
+
+        function verificarDesconto() { 
+
+            // Solicita a data de aniversário ao usuário 
+
+            var dataAniversario = document.getElementById('dataAniversario').value; 
+
+            var valorRefeicao = parseFloat(document.getElementById('valorRefeicao').value); 
+
+            // Obtém a data atual 
+
+            var dataAtual = new Date(); 
+
+            var diaAtual = dataAtual.getDate().toString().padStart(2, '0'); 
+
+            var mesAtual = (dataAtual.getMonth() + 1).toString().padStart(2, '0'); // Mês começa do zero 
+
+            var dataFormatada = diaAtual + '/' + mesAtual; 
+
+            // Verifica se é o aniversário do usuário 
+
+            if (dataFormatada === dataAniversario) { 
+
+                // Aplica um desconto de 30% se for o aniversário 
+
+                var desconto = valorRefeicao * 0.3; 
+
+                var valorFinal = valorRefeicao - desconto; 
+
+                document.getElementById('resultado').textContent = "Parabéns! Hoje é o seu aniversário. Valor da refeição com desconto: R$" + valorFinal.toFixed(2); 
+
+            } else { 
+
+                // Mostra o valor total da refeição se não for o aniversário 
+
+                document.getElementById('resultado').textContent = "Hoje não é o seu aniversário. Valor total da refeição: R$" + valorRefeicao.toFixed(2); 
+
+            } 
+
+        } 
+
+    </script> 
+</div>
+</body>
+</html>

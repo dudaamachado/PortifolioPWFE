@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Relógio Digital</title> 
+</head>
+<body>
+      <!-- Cabeçalho da página --> 
+
+  <h1>Relógio Digital</h1> 
+
+  <!-- Parágrafo onde exibiremos a hora atual --> 
+<div class="box">
+  <p id="hora"></p> 
+
+  <script> 
+
+    // Início da seção de script em JavaScript 
+
+    // Função para atualizar a hora 
+
+    function atualizarHora() { 
+
+      // Obtém a data e hora atual 
+
+      var agora = new Date(); 
+
+      // Obtém as horas, minutos e segundos, e adiciona zeros à esquerda se necessário 
+
+      var horas = agora.getHours().toString().padStart(2, '0'); 
+
+      var minutos = agora.getMinutes().toString().padStart(2, '0'); 
+
+      var segundos = agora.getSeconds().toString().padStart(2, '0'); 
+
+      // Formata a hora atual no formato "HH:MM:SS" 
+
+      var horaAtual = horas + ":" + minutos + ":" + segundos; 
+
+      // Exibe a hora atual no parágrafo com o ID 'hora' 
+
+      document.getElementById('hora').textContent = "Hora atual: " + horaAtual; 
+
+    } 
+
+    // Define um intervalo de atualização a cada 1000 milissegundos (1 segundo) 
+
+    setInterval(atualizarHora, 1000); 
+
+    // Fim da seção de script em JavaScript 
+
+  </script> 
+  </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de IMC</title>
+<body> 
+
+  <!-- Cabeçalho da página --> 
+
+  <h1>Calculadora de IMC</h1> 
+
+  
+<div class="box">
+  <!-- Rótulo e campo de entrada para o peso em quilogramas (kg) --> 
+
+  <label for="peso">Peso (kg):</label> 
+
+  <input type="number" id="peso"> 
+
+  <!-- Rótulo e campo de entrada para a altura em metros (m) --> 
+
+  <label for="altura">Altura (m):</label> 
+
+  <input type="number" id="altura"> 
+
+  <!-- Botão que chama a função "calcularIMC" quando clicado --> 
+
+  <button onclick="calcularIMC()">Calcular</button> 
+
+
+  <!-- Parágrafo onde exibiremos o resultado do cálculo --> 
+
+  <p id="resultado"></p> 
+
+  <script> 
+
+    // Início da seção de script em JavaScript 
+
+    // Função para calcular o IMC 
+
+    function calcularIMC() { 
+
+      // Obtém o valor do peso e da altura a partir dos campos de entrada 
+
+      var peso = parseFloat(document.getElementById('peso').value); 
+
+      var altura = parseFloat(document.getElementById('altura').value); 
+
+  
+      // Calcula o IMC 
+
+      var imc = peso / (altura * altura); 
+
+      // Variável para armazenar o resultado 
+
+      var resultado; 
+
+      // Verifica se o IMC é inválido (NaN ou menor ou igual a zero) 
+
+      if (isNaN(imc) || imc <= 0) { 
+
+        resultado = "Por favor, insira valores válidos."; 
+
+      } else if (imc < 18.5) { 
+
+        resultado = "Abaixo do peso"; 
+
+      } else if (imc < 24.9) { 
+
+        resultado = "Peso normal"; 
+
+      } else if (imc < 29.9) { 
+
+        resultado = "Sobrepeso"; 
+
+      } else { 
+
+        resultado = "Obeso"; 
+
+      } 
+
+      // Exibe o resultado no parágrafo com o ID 'resultado' 
+
+      document.getElementById('resultado').textContent = "Seu IMC é " + imc.toFixed(2) + " - " + resultado; 
+
+    } 
+
+    // Fim da seção de script em JavaScript 
+
+  </script> 
+  </div>
+</body> 
+</html> 
+<!-- Fim do documento HTML --> 
